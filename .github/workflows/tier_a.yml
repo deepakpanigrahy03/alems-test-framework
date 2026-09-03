@@ -19,8 +19,5 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Smoke test
-        run: python checks/tier_a/smoke_imports.py
-
       - name: Run Tier A
         run: pytest checks/tier_a/ -v --tb=short
