@@ -1,0 +1,33 @@
+name: Tier A — Logic Tests
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  tier-a:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Smoke test — verify all imports resolve
+        run: python checks/tier_a/smoke_imports.py
+
+      - name: Run Tier A
+        run: pytest checks/tier_a/ -v --tb=short --junitxml=reports/tier_a.xml
+
+      - name: Upload test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tier-a-report
+          path: reports/tier_a.xml
