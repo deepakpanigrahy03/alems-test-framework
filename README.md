@@ -94,3 +94,4 @@ Early scaffolding only. HLD in progress — see project tracker for the
 current design (pinned per-machine capability/coverage profiles,
 config-driven rule definitions, advisory-first CI integration promoted
 to blocking once baselines are proven stable across all four platforms).
+# test CI Thu Sep  3 12:58:04 PM CDT 2026
