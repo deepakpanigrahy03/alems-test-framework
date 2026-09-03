@@ -11,3 +11,4 @@ venv/
 *.sqlite3
 .env
 reports/output/
+.alems-env
