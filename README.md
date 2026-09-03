@@ -91,6 +91,13 @@ files here will not be reflected upstream, and will be silently
 overwritten (or cause confusing merge state) the next time the pin is
 updated.
 
+## Documentation
+
+See [doc/TESTING_GUIDE.md](doc/TESTING_GUIDE.md) for how to check out
+specific alems-platform tags/branches, work on your own feature branch,
+and how multiple people can test in parallel without interfering with
+each other.
+
 ## Status
 
 Early scaffolding only. HLD in progress — see project tracker for the
