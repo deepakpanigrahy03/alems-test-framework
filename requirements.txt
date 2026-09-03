@@ -1,0 +1,6 @@
+# Framework's own dependencies. alems-platform's own requirements live in
+# vendor/alems-platform/requirements*.txt and are NOT duplicated here —
+# install those separately if a check needs to exercise platform code
+# beyond simple imports (see README: PYTHONPATH setup).
+
+PyYAML>=6.0
