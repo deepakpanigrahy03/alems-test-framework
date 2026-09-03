@@ -23,16 +23,6 @@ profile — not against itself. If a signal that was previously available
 disappears, that is reported as a regression, not silently accepted as
 a new, lower baseline.
 
-## Why this is a separate repository
-
-This framework must not be part of alems-platform itself. If the test
-framework lived inside the repository it tests, a break in the platform
-could ship alongside a broken or complicit test in the same commit, and
-the framework would no longer be an independent check — it would be
-testing itself. Keeping it as a sibling repository, with alems-platform
-referenced only as a **pinned, read-only dependency**, preserves that
-independence.
-
 ## How alems-platform is referenced
 
 alems-platform is included here as a git submodule, pinned to a specific
